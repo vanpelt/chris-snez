@@ -1,0 +1,78 @@
+body {
+  background:url(../images/gradient.jpg) repeat-x 0 100px;
+  color:#003f54;
+}
+div.header {
+  padding-top:4px;
+  background:#FFF url(../images/header.gif) no-repeat 0 46px;
+  height:53px;
+}
+div.header ul {
+  position:absolute;
+  right:0;
+  top:51px;
+}
+div.header li {
+  display:inline;
+  margin-right:18px;
+  list-style-type:none;
+}
+div.header li a {
+  font-size:130%;
+  color:#FFF;
+  text-decoration:none;
+}
+div.header li a:hover {
+  color:#dfe7c5;
+}
+div.container {
+  position:relative;
+  padding:0 15px;
+}
+div.pattern {
+  background:url(../images/pattern.gif) repeat 0 100%;
+}
+h1.logo {
+  position:absolute;
+  width:345px;
+  height:93px;
+  text-indent:-9999px;
+  background:url(../images/chrisandsnez.png) no-repeat;
+}
+h2 {
+  color:#003f54;
+  font-size:130%;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+div.content .padder {
+  font-size:110%;
+  margin:25px 10px 10px 15px;
+  padding:15px;
+  min-height:360px;
+  background:#dfe7c5;
+}
+div.side .padder {
+  padding:0 15px 0 0;
+  color:#FFF;
+  margin:25px 0;
+}
+div.side h3 {
+  color:#FFF;
+  font-weight:bold;
+  margin-bottom:8px;
+  font-size:130%;
+  padding:0 0 3px 3px;
+  border-bottom: 3px solid #dfe7c5;
+}
+
+div.footer {
+  height:57px;
+  background:url(../images/footer.gif) no-repeat;
+}
+div.footer p {
+  color:#FFF;
+  text-align:right;
+  font-size:90%;
+  padding:35px 12px;
+}
