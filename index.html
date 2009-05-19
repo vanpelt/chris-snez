@@ -3,5 +3,56 @@ layout: default
 title: Booyah!
 ---
 
-<h2>We are totally getting married!</h2>
-<p>This is gonna be the greatest most awesome and neat wedding every in the history of weddings.</p>
+<h2>A boy from Iowa met a girl from Serbia</h2>
+<div id="map_canvas" style="width: 500px; height: 300px"></div>
+<script type="text/javascript" charset="utf-8">
+window.addEvent('load', function(){
+  var map = new GMap2($("map_canvas"));
+  //var listner = GEvent.addListener(map,"load",zoomer);
+  map.setUIToDefault();
+  var coder = new GClientGeocoder();
+  var spencer =null
+  coder.getLatLng("Spencer, Ia", function(latlng) {
+    spencer = latlng
+    map.setCenter(latlng, 9);
+    map.addOverlay(new GMarker(latlng))
+  })
+  var serbia =null
+  coder.getLatLng("Obrenovac, Serbia", function(latlng) {
+    serbia = latlng
+    map.addOverlay(new GMarker(latlng))
+  })
+  var zoomed = 0
+  var zoomer = function(inout){
+    //console.log("Zoom", inout)
+    map[inout == "in" ? "zoomIn" : "zoomOut"]()
+    zoomed += 1
+    if(zoomed < 5)
+      zoomer.delay(500, this, [inout])
+    else {
+      //GEvent.removeListener(listner)
+      //listner = GEvent.addListener(map,"tilesloaded",panner)
+      panner.delay(1500)
+    }
+  }
+  //GEvent.addListener(map, "tilesloaded", function() { 
+  //  console.log("Map loaded!")
+  //})
+  zoomer.delay(2500)
+  var panned = 0
+  var panner = function(a) {
+    panned += 1
+    if(panned <= 9){
+      map.panDirection(-1, 0)
+      panner.delay(250)
+    } else if(panned == 10) {
+      zoomed = 0
+      map.panTo(serbia);
+      zoomer.delay(500, this, ["in"])
+    }
+  }
+  //var dir = new GDirections(map)
+  //GEvent.addListener(dir,"error",function(e){console.log("Fuck...",e.getStatus())})
+  //dir.load("from: Spencer, Ia to: Obrenovac, Serbia")
+})
+</script>
