@@ -52,7 +52,11 @@ div.content .padder {
   min-height:360px;
   background:#dfe7c5;
 }
+div.side {
+}
 div.side .padder {
+  background:#003f54;
+  opacity:0.9;
   padding:0 15px 0 0;
   color:#FFF;
   margin:25px 0;
@@ -60,7 +64,7 @@ div.side .padder {
 div.side h3 {
   color:#FFF;
   font-weight:bold;
-  margin-bottom:8px;
+  margin:5px 3px 8px;
   font-size:130%;
   padding:0 0 3px 3px;
   border-bottom: 3px solid #dfe7c5;
