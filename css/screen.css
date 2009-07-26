@@ -84,5 +84,7 @@ div.footer p {
 /* WUFOO */
 
 #container #logo {
+  position:relative;
+  z-index:5;
   margin:-10px 0 0 -15px;
 }
