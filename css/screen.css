@@ -86,5 +86,6 @@ div.footer p {
 #container #logo {
   position:relative;
   z-index:5;
-  margin:-10px 0 0 -15px;
+  background-color:transparent;
+  margin:-12px 0 0 -20px;
 }
