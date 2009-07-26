@@ -32,7 +32,7 @@ div.container {
 div.pattern {
   background:url(../images/pattern.gif) repeat 0 100%;
 }
-h1.logo {
+h1.logo a {
   position:absolute;
   width:345px;
   height:93px;
@@ -64,10 +64,16 @@ div.side .padder {
 div.side h3 {
   color:#FFF;
   font-weight:bold;
-  margin:5px 3px 8px;
+  margin:5px 5px 2px;
   font-size:130%;
-  padding:5px 0 3px 5px;
-  border-bottom: 3px solid #dfe7c5;
+  padding:5px 0 0 5px;
+}
+div.side a {
+  color:#dfe7c5;
+}
+div.side p {
+  padding: 2px 13px 8px;
+  margin-bottom:0;
 }
 
 div.footer {
